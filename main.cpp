@@ -169,7 +169,8 @@ namespace operations_research {
 			//parameters.set_preferred_variable_order((SatParameters_VariableOrder) 1);
 			model.Add(NewSatParameters(parameters));
 			const CpSolverResponse response = SolveCpModel(cp_model.Build(), &model);
-
+			std::vector<std::string> status_vec = { "Unknown", "Model_Invalid", "Feasible", "Infeasible", "Optimal" };
+			std::cout << "Status = " << status_vec[(int)response.status()] << '\n';
 			if (response.status() == CpSolverStatus::OPTIMAL ||
 				response.status() == CpSolverStatus::FEASIBLE)
 			{

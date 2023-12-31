@@ -7,6 +7,7 @@
 
 ### Example Output
 ```
+Status = Optimal
 Channel Size = 4
 Original Depth = 4
 Obj_Type = MINIMIZE_DEPTH, Obj_Val = 3
