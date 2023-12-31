@@ -2,6 +2,8 @@
 
 - Model based on [Optimal Sorting Networks (Daniel Bundala and Jakub Zavodny)](https://arxiv.org/pdf/1310.6271.pdf)
 - Requires [OR-Tools](https://github.com/google/or-tools) and C++20 (because of `std::format`)
+- This generates all $2^{n}$ binary sequences and then constructs a model based on that. Requires `Channel_Size` and `Original_Depth` as input.
+- Two `objectives` available: `MINIMIZE_DEPTH` or `MINIMIZE_TOTAL_COMPARATORS`.
 
 ### Example Output
 ```
